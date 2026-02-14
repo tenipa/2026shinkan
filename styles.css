@@ -1,0 +1,512 @@
+* {
+    box-sizing: border-box;
+}
+
+/* 全体のスタイル */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #ffffff;
+}
+
+/* 固定ヘッダー */
+.apple-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #89CFF0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 左・中央・右を分割配置 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 下に影をつける */
+    z-index: 1000; /* ヘッダーを最前面に */
+}
+
+/* 左・中央・右の共通スタイル */
+.header-left, .header-center, .header-right {
+    flex: 1; /* それぞれ均等な幅 */
+    display: flex;
+    align-items: center;
+}
+
+/* 左寄せ */
+.header-left {
+    justify-content: flex-start;
+    margin-left: 15px;
+}
+
+/* 中央寄せ */
+.header-center {
+    justify-content: center;
+}
+
+/* 右寄せ */
+.header-right {
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+/* ナビゲーションリンクのデザイン */
+.header-center a, .header-right a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    margin: 0 10px; /* リンク間の間隔 */
+    white-space: nowrap; /* テキストの折り返しを防ぐ */
+}
+
+.club-logo {
+    width: 40px; /* 適切なサイズに調整 */
+    height: auto;
+    margin-right: 15px; /* ロゴとテキストの間隔 */
+}
+
+
+.club-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #3836c7; /* 赤系のアクセントカラー */
+    font-family: "Arial", sans-serif;
+    margin-top: 5px;
+    white-space: nowrap; /* テキストの折り返しを防ぐ */
+    margin-right: min(40px,4vw);
+}
+
+.home-a {
+    text-decoration: none; /* アンダーラインを削除 */
+}
+
+/* ヘッダー専用 SNS アイコン */
+.header-social-icons {
+    display: flex;
+    gap: 0px; /* アイコン間の間隔 */
+    margin-top: 10px;
+}
+
+/* ヘッダーのアイコンデザイン */
+.header-social-icons img {
+    width: 24px; /* アイコンのサイズ */
+    height: 24px;
+}
+
+.menu-toggle {
+    display: none; /* PCでは非表示 */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+/* スマホ用ナビゲーション（最初は非表示） */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    text-align: center;
+    z-index: 9999;
+}
+
+
+.mobile-nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: block;
+}
+
+
+
+@media (max-width: 800px) {
+    .header-center {
+        display: none; /* PC用のメニューを非表示 */
+    }
+    .menu-toggle {
+        display: block; /* ハンバーガーメニューを表示 */
+    }
+}
+
+
+
+
+
+/* ヒーローセクション */
+/* ヒーローセクション */
+.hero {
+    min-height: 54vw;
+    background: url('image/background.png') no-repeat center top / contain; /* 上寄せ */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 上寄せ */
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 3rem ;
+}
+
+@media (max-width: 1000px) {
+    .hero {
+        height: 300px; /* 高さ固定 */
+        background-size: cover; /* 横がはみ出る */
+        min-height: 60vh;
+    }
+}
+
+
+
+.hero h1 {
+
+    font-size: min(3rem, 7vw);
+    line-height: 1.2;
+    margin-top: -1rem; /* さらに上部に余白を追加 */
+    max-width: fit-content;
+    white-space: nowrap;
+    color: #6e20ff; /* 紫色 */
+}
+.hero h2 {
+    font-size: min(2rem, 5vw);
+    line-height: 1.2;
+    margin-top: 2rem; /* さらに上部に余白を追加 */
+    max-width: fit-content;
+    white-space: nowrap;
+    color: #000000; /* 紫色 */
+}
+
+
+
+/* その他のセクション */
+.section {
+    padding: 0.5rem 2rem 2rem;
+    text-align: center;
+}
+
+.section:nth-child(even) {
+    background: #f0f0f0;
+}
+
+/* 年間予定のスタイル */
+.schedule-list li {
+    font-size: 1.2rem;
+    margin: 10px auto;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* フォーム */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background: #0071e3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #005bb5;
+}
+
+/* フッター */
+.site-footer {
+    background: #89CFF0; 
+    color: #000000; /* 文字を黒に */
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    position: relative;
+    width: 100%;
+    border-top: 1px solid #ddd; /* 上に薄いグレーの線を追加 */
+}
+
+/* フッターのコンテンツ幅を調整 */
+.site-footer .footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* フッター内のテキスト */
+.site-footer p {
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+    color: #555; /* 少し薄めの黒 */
+}
+
+/* フッターのリンクリスト */
+.site-footer .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* リスト内のリンク */
+.site-footer .footer-links li {
+    display: inline;
+}
+
+/* 通常のリンクカラー */
+.site-footer .footer-links a {
+    color: #0071e3; /* 青色 */
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* ホバー時のリンクカラー */
+.site-footer .footer-links a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* 少し濃い青 */
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    background: #0071e3;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background 0.3s;
+    margin-top: 20px; /* 他のコンテンツとの間隔を調整 */
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #005bb5;
+    text-decoration: underline;
+}
+
+/* 年間行事詳細のスタイル */
+/* 年間行事詳細のスタイル */
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.event-detail {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.event-detail:hover {
+    transform: translateY(-5px);
+}
+
+.event-detail h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.event-detail p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+/* 経験者男子向けカード（青） */
+.event-card.experienced-men, .guideline-card.experienced-men {
+    background-color: #4A90E2; /* 鮮やかな青 */
+    color: white;
+}
+
+.event-card.experienced-men:hover, .guideline-card.experienced-men:hover {
+    background-color: #357ABD; /* 濃い青 */
+}
+
+/* 初心者男子向けカード（水色） */
+.event-card.beginner-men, .guideline-card.beginner-men {
+    background-color: #5AC8FA; /* 鮮やかな水色 */
+    color: white;
+}
+
+.event-card.beginner-men:hover, .guideline-card.beginner-men:hover {
+    background-color: #3BA9E0; /* 濃い水色 */
+}
+
+/* 女子向けカード（ピンク） */
+.event-card.women, .guideline-card.women {
+    background-color: #FF4081; /* 鮮やかなピンク */
+    color: white;
+}
+
+.event-card.women:hover, .guideline-card.women:hover {
+    background-color: #D81B60; /* 濃いピンク */
+}
+
+/* 全体のスタイル */
+.event-card, .guideline-card {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ホバー時のアニメーション */
+.event-card:hover, .guideline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.social-icons img {
+    width: min(15vw,150px);
+    height: min(15vw,150px);
+    margin: 20px;
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 0px; /* アイコン間の間隔 */
+    justify-content: center; /* 必要なら中央揃え */
+}
+
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 60px;
+    justify-content: center;
+    padding: 30px;
+}
+.about-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 280px;
+    margin: 0 auto;
+}
+.about-card h3 {
+    color: #222;
+    font-size: 1.2em;
+}
+@media (max-width: 1200px) {
+    .about-grid {
+        grid-template-columns: repeat(2, min(330px,50%));
+        gap: min(40px,8%);
+        margin-bottom: 50px;
+    }
+    .about-card{
+        max-width: 100%;
+    }
+}
+@media (max-width: 700px) {
+    .about-grid {
+        grid-template-columns: repeat(1, min(300px,100%));
+        gap: 30px;
+        margin-bottom: -20px;
+    }
+}
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 の比率 */
+    height: 0;
+    overflow: hidden;
+    max-width: min(80%,1000px);
+    background: #000;
+    justify-content: center;  /* 水平方向の中央寄せ */
+    margin: auto;
+    
+    aspect-ratio: 9 / 9; /* 9:16の縦動画の比率を固定 */
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.flyer-container {
+    display: flex;
+    justify-content: center; /* 中央揃え */
+    gap: 20px; /* 画像の間隔 */
+    flex-wrap: wrap; /* 画面サイズに応じて折り返し */
+    margin-top: 3vw;
+}
+
+.flyer {
+    max-width: 35%; /* PCでは横並び */
+    height: auto;
+}
+
+/* スマホでは縦並び */
+@media (max-width: 1000px) {
+    .flyer {
+        max-width: 80%; /* スマホでは1枚ずつ */
+    }
+}
+
+.button-container {
+    text-align: center; /* ボタンを中央に */
+    margin-top: 20px; /* 上に余白 */
+}
+
+.form-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.form-button:hover {
+    background: #0056b3;
+}
+
+
+
+
+

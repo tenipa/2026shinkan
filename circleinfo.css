@@ -1,0 +1,219 @@
+/* サークル紹介ヘッダー */
+.circleinfo-header {
+    text-align: left;
+    padding: 0.1px 5px;
+    background-color: #d3efff; /* 淡いブルー */
+    color: #003366; /* 濃いネイビー */
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 10px auto;
+    border: 1px solid #003366; /* 枠線の太さ、種類、色 */
+}
+
+/* 見出し（サークル紹介） */
+.circleinfo-header h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* 説明文 */
+.circleinfo-header p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+/* サークル情報ページ専用のスタイル */
+.circle-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    margin: 30px auto;
+    max-width: min(800px, 90%);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.circle-section:nth-child(even){
+    background-color: #f0f0f0;
+}
+
+/* セクションタイトル */
+.circle-section h1, 
+.circle-section h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+/* このページ専用の p スタイル */
+.circleinfo-section p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+}
+
+
+/* 円グラフのコンテナ */
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+/* 円グラフの凡例 */
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+
+
+/* 練習についてのセクション */
+
+/* 練習タイプのレイアウト */
+.practice-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+
+/* 各練習ブロック */
+.practice-item {
+    text-align: left;
+    max-width: 500px;
+}
+
+/* 練習画像（ダミー） */
+.practice-image {
+    width: 150px;
+    height: 150px;
+    background-color: #89CFF0;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .practice-type {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* 練習日程セクションの表デザイン */
+.practice-schedule {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.practice-schedule table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+    background-color: #A7E3E7;
+}
+
+.practice-schedule th, .practice-schedule td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.practice-schedule th {
+    background-color: #5DC1D8;
+    color: white;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .practice-schedule table {
+        font-size: 14px;
+    }
+
+}
+
+
+/* 戦績のリスト */
+.achievements-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-left: min(150px,4vw);
+    padding-top: 10px;
+    /* padding-right: 10px;
+    padding-left: 5px; */
+}
+/* 
+@media (max-width: 768px) {
+    .achievements-list{
+        margin-left: 3vw-0px;
+    }
+    
+} */
+
+.achievements-list li {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0;
+
+}
+
+/* 優勝を強調 */
+.highlight-win {
+    color: #d91e18; /* 鮮やかな赤 */
+    font-size: 20px;
+}
+
+.highlight-second {
+    color: #484bff; /* シルバー色 */
+    font-weight: bold;
+}
+
+
+/* ベスト4・ベスト8を適度に強調 */
+.highlight-rank {
+    color: #e67e22; /* 濃いオレンジ */
+    font-size: 18px;
+}
+
+/* 進行中の試合を目立たせる */
+.progress {
+    color: #3498db; /* 青色 */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* 注意書きのスタイル */
+.note {
+    font-size: 14px;
+    color: #7a7a7a; /* グレーで控えめに */
+    text-align: left;
+    margin-top: 10px;
+    margin-left: min(150px,4vw);
+}
+
+

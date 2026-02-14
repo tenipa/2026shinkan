@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サークル紹介 | 東京大学スポーツ愛好会 硬式テニスパート</title>
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="circleinfo.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+    <div id="header-placeholder"></div> <!-- ヘッダーを埋め込む場所 -->
+    
+    
+    <br> <br> <br>
+
+    <section class="circleinfo-header">
+        <h1>サークル紹介</h1>
+        <!-- <p>スポーツ愛好会テニスパートは、学内最大規模のテニスサークルです！</p>
+        <p>駒場での練習環境はサークルの中でもトップクラスを誇り、充実した練習と多彩なイベントを楽しめます。</p>
+        <p>本気でテニスに打ち込みたい人も、仲間とサークル活動を楽しみたい人も大歓迎！</p>
+        <p>練習もイベントも盛りだくさんのスポーツ愛好会テニスパートで、一緒に最高の大学生活を送りませんか？</p>
+        <p>ぜひ、私たちと一緒にテニスを楽しみましょう！</p> -->
+    </section>
+    
+
+    <section class="circle-section">
+        <h1>メンバーについて</h1>
+        <p>スポ愛テニパは、学内二大テニスサークルの一つで、メンバーは全員東大生！</p>
+        <p>学内最大級の規模を誇っています！</p>
+
+    <!-- 円グラフのキャンバス -->
+    <div class="chart-container">
+        <canvas id="memberChart"></canvas>
+    </div>
+
+    <!-- 円グラフの凡例 -->
+    <div class="chart-legend">
+        <div class="legend-item"><span class="legend-color" style="background-color: blue;"></span>経験者男子（30%）</div>
+        <div class="legend-item"><span class="legend-color" style="background-color: lightblue;"></span>初心者男子（20%）</div>
+        <div class="legend-item"><span class="legend-color" style="background-color: pink;"></span>初心者女子（30%）</div>
+        <div class="legend-item"><span class="legend-color" style="background-color: red;"></span>経験者女子（20%）</div>
+    </div>
+
+        <p>一学年の人数は約100名で、男女比は1：1！</p>
+        <p>普段の練習に加えイベントも充実しているので、男女問わず仲良くなれます♪</p>
+    </section>
+    
+    <section class="circle-section">
+        <h2>練習について</h2>
+        <p>練習は全て駒場のコート！最大週5日！</p>
+        <p>授業前後などに手軽に参加出来て、交通費もかかりません！</p>
+        
+        <p>テニパでの練習は主に「駒練」と「チーム」の二つがあります。</p>
+    
+        <div class="practice-type">
+            <div class="practice-item">
+                <h3>1 駒練</h3>
+                <p>朝に毎週3回と夜に毎週2回、駒場で行われる練習のことを駒練といいます！</p>
+                <p>練習内容は基礎から形式練までさらう感じで、授業やバイトの前後に誰でも気軽にふらっと立ち寄れます！</p>
+                <!-- <div class="practice-image"></div> -->
+            </div>
+    
+            <div class="practice-item">
+                <h3>2 チーム</h3>
+                <p>テニスをさらに本気でやりたいという方向けに、勝つための技術を先輩などに教えてもらう事のできる練習会です！</p>
+                <!-- <div class="practice-image"></div> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="circle-section">
+        <h2>練習日程</h2>
+        <!-- <p>ほぼ毎日駒場でテニスできます</p> -->
+    
+        <!-- 練習日程の表 -->
+        <div class="practice-schedule">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>月</th>
+                    <th>火</th>
+                    <th>水</th>
+                    <th>木</th>
+                    <th>金</th>
+                    <th>土</th>
+                </tr>
+                <tr>
+                    <td>朝</td>
+                    <td>◯</td>
+                    <td></td>
+                    <td>◯</td>
+                    <td></td>
+                    <td></td>
+                    <td>◯</td>
+                </tr>
+                <tr>
+                    <td>夜</td>
+                    <td></td>
+                    <td>◯</td>
+                    <td></td>
+                    <td>△</td>
+                    <td>◯</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    
+        <!-- 詳細情報 -->
+        <p>AM &nbsp;8:30～10:30           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <p>PM 17:00～19:00, 19:00～20:30</p>
+        <p>※木曜は隔週でコートが使用可能です</p>
+        <p><strong>※練習は全て駒場のコートで行います！</strong></p>
+    </section>
+
+    <section class="circle-section">
+        <h2>イベントについて</h2>
+        <p>テニパは1年間を通してさまざまなイベントを開催しています！</p>
+        <p>友達と仲が深まること間違いなし！</p>
+    
+        <a href="events.html" class="btn" id="details-button">詳細はこちら</a>
+    </section>
+    
+    <section class="circle-section">
+        <h2>戦績</h2>
+        <p>スポ愛テニパには、高いレベルで戦う実力者が揃っています！</p>
+        <p>大会で結果を残す選手も多く、競技志向のメンバーが切磋琢磨しながら日々成長しています。</p>
+        
+        <ul class="achievements-list">
+            <li>🏆 東大オープン 女子ダブルス <span class="highlight-win"><strong>優勝</strong></span></li>
+            <li>🏆 国公立新人戦 男子ダブルス <span class="highlight-win"><strong>優勝</strong></span></li>
+            <li>🎖️ 国公立団体戦 <span class="highlight-rank"><strong>ベスト8</strong></span></li>
+            <li>🎾 東大フレッシュオープン 男子シングルス <span class="highlight-rank"><strong>ベスト4</strong></span></li>
+            <li>🎾 東大フレッシュオープン 男子ダブルス <span class="highlight-rank"><strong>ベスト4</strong></span> <span class="progress">(進行中)</span></li>
+            <li>🥈 東大ミックス大会 <span class="highlight-second"><strong>準優勝</strong></span></li>
+            
+        </ul>
+        <p class="note">※ すべて2024年度の戦績です</p>
+    </section>
+    
+    
+    
+    
+    
+
+    <div id="footer-placeholder"></div> <!-- フッターを埋め込む場所 -->
+
+    <script defer src="script.js"></script>
+</body>
+</html>

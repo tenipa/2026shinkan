@@ -1,0 +1,371 @@
+/* 全体レイアウト */
+.content-wrapper {
+    max-width: min(800px,90%); /* 横幅を広げて読みやすく */
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+    line-height: 1.7; /* 行間を適度に広げる */
+    word-break: break-word;
+}
+
+/* セクションデザイン */
+.section {
+    margin: 40px auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: min(900px,90%); /* セクションの幅も調整 */
+    text-align: left; /* 文章を左寄せ */
+}
+
+/* 見出しデザイン */
+h2, h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* クイックリンクのデザイン */
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.quick-links .btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.quick-links .btn:hover {
+    background-color: #0056b3;
+}
+
+/* イベントタイトル + ボタン横並び */
+.event-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* PCではタイトルとボタンを両端に配置 */
+    flex-wrap: wrap; /* 画面が狭いときは折り返し */
+    gap: 10px;
+}
+
+.signup-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* ボタンのテキストが折り返されないように */
+    margin-left: 100px; /* 左側に20pxのスペースを追加 */
+    margin-bottom: 30px;
+    margin-right: 50px;
+}
+
+/* ホバー時の色変更 */
+.signup-button:hover {
+    background-color: #0056b3;
+}
+
+/* リストのデザイン */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* イベントテーブルのデザイン */
+.event-details {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.event-table-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+
+.event-table {
+    width: 90%;
+    max-width: 900px;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.event-table th, .event-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.event-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.event-table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+.event-table tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+.event-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* 追加練習会の申し込みについての注意（経験者男子用） */
+.notice-text {
+    text-align: center;
+    font-size: 16px;
+    color: #B22222; /* 落ち着いた暗い赤 */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+/* 受付前の状態を明確に */
+.pending-status {
+    color: orange;
+    font-weight: bold;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 15px;
+    }
+
+    .section {
+        padding: 15px;
+    }
+
+    .quick-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quick-links .btn {
+        width: 80%;
+        text-align: center;
+    }
+
+    .event-table {
+        width: 100%;
+    }
+
+    /* 画面が狭いときはタイトルとボタンを縦並び */
+    .event-title {
+        flex-direction: column; /* スマホではタイトルとボタンを縦並び */
+        align-items: center; /* スマホではボタンを中央寄せ */
+        text-align: center;
+    }
+    .signup-button {
+        margin: 10px auto 0 auto; /* スマホでは中央寄せ */
+        display: block;
+    }
+}
+
+/* 重要な注意書きのデザイン */
+.important-note {
+    background-color: #ff3cd; /* 黄色系の背景 */
+    color: #856404; /* 暗めの黄色文字 */
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ffeeba;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.event-intro {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.event-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: min(400px,90%);
+    text-align: center;
+}
+
+.event-guidelines {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.guideline-card {
+    background-color: #eaf5ff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+@media (max-width: 1000px){
+    .guideline-card{
+    width: min(400px,90%);
+    }
+}
+
+.guideline-card.highlight {
+    background-color: #ffefc1;
+}
+
+h4 {
+    font-size: 26px; /* さらに大きく */
+    font-weight: bold;
+}
+h2 {
+    font-size: 35px;
+}
+h5 {
+    font-size: 20px;
+}
+
+/* 入会期間を大きく表示 */
+.entry-period {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d9534f; /* 赤系の色で強調 */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* 重要な注意ボックス（Googleフォーム提出の強調） */
+.important-note {
+    background-color: #ffefc1; /* 薄い黄色 */
+    color: #856404;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ffeeba;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 入会期間外のメッセージ */
+.entry-closed {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+
+/* 経験者男子向け (薄めの青) */
+#shinkan-experienced-men {
+    background-color: #A3CFFF; /* 淡い青 */
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* 初心者男子向け (薄めの水色) */
+#shinkan-beginner-men {
+    background-color: #C2EEFF; /* 淡い水色 */
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* 女子向け (薄めのピンク) */
+#shinkan-women {
+    background-color: #FFC2E0; /* 淡いピンク */
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* 経験者男子向けカード（青） */
+.event-card.experienced-men, .guideline-card.experienced-men {
+    background-color: #4A90E2; /* 鮮やかな青 */
+    color: white;
+}
+
+.event-card.experienced-men:hover, .guideline-card.experienced-men:hover {
+    background-color: #357ABD; /* 濃い青 */
+}
+
+/* 初心者男子向けカード（水色） */
+.event-card.beginner-men, .guideline-card.beginner-men {
+    background-color: #5AC8FA; /* 鮮やかな水色 */
+    color: white;
+}
+
+.event-card.beginner-men:hover, .guideline-card.beginner-men:hover {
+    background-color: #3BA9E0; /* 濃い水色 */
+}
+
+/* 女子向けカード（ピンク） */
+.event-card.women, .guideline-card.women {
+    background-color: #FF4081; /* 鮮やかなピンク */
+    color: white;
+}
+
+.event-card.women:hover, .guideline-card.women:hover {
+    background-color: #D81B60; /* 濃いピンク */
+}
+
+/* 全体のスタイル */
+.event-card, .guideline-card {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ホバー時のアニメーション */
+.event-card:hover, .guideline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 10; /* ホバー時に z-index を上げすぎない */
+}
+
+/* セクションのスクロール位置を調整 */
+.section {
+    scroll-margin-top: 80px; /* 上に80pxの余白を作る（ヘッダーがある場合） */
+}
+
+.selection{
+    scroll-margin-top: 80px;
+
+}
+
