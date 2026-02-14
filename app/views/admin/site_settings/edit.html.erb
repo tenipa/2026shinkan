@@ -1,0 +1,83 @@
+<h1 class="text-2xl font-bold mb-6">サイト設定</h1>
+
+<%= form_with url: admin_site_settings_path, method: :patch, class: "bg-white shadow rounded p-6 space-y-6" do |f| %>
+  <fieldset>
+    <legend class="text-lg font-semibold mb-3">ヒーローセクション</legend>
+    <div class="space-y-4">
+      <div>
+        <%= f.label "settings[hero_title]", "タイトル", class: "block text-sm font-medium text-gray-700 mb-1" %>
+        <%= f.text_field "settings[hero_title]", value: @settings["hero_title"], class: "w-full border border-gray-300 rounded px-3 py-2" %>
+      </div>
+      <div>
+        <%= f.label "settings[hero_subtitle]", "サブタイトル", class: "block text-sm font-medium text-gray-700 mb-1" %>
+        <%= f.text_field "settings[hero_subtitle]", value: @settings["hero_subtitle"], class: "w-full border border-gray-300 rounded px-3 py-2" %>
+      </div>
+      <div>
+        <%= f.label "settings[catchphrase]", "キャッチフレーズ", class: "block text-sm font-medium text-gray-700 mb-1" %>
+        <%= f.text_field "settings[catchphrase]", value: @settings["catchphrase"], class: "w-full border border-gray-300 rounded px-3 py-2" %>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend class="text-lg font-semibold mb-3">SNSリンク</legend>
+    <div class="space-y-4">
+      <div>
+        <%= f.label "settings[instagram_url]", "Instagram URL", class: "block text-sm font-medium text-gray-700 mb-1" %>
+        <%= f.url_field "settings[instagram_url]", value: @settings["instagram_url"], class: "w-full border border-gray-300 rounded px-3 py-2" %>
+      </div>
+      <div>
+        <%= f.label "settings[x_url]", "X (Twitter) URL", class: "block text-sm font-medium text-gray-700 mb-1" %>
+        <%= f.url_field "settings[x_url]", value: @settings["x_url"], class: "w-full border border-gray-300 rounded px-3 py-2" %>
+      </div>
+      <div>
+        <%= f.label "settings[line_url]", "LINE URL", class: "block text-sm font-medium text-gray-700 mb-1" %>
+        <%= f.url_field "settings[line_url]", value: @settings["line_url"], class: "w-full border border-gray-300 rounded px-3 py-2" %>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend class="text-lg font-semibold mb-3">新歓情報</legend>
+    <div class="space-y-4">
+      <div>
+        <%= f.label "settings[recruitment_body]", "新歓情報本文", class: "block text-sm font-medium text-gray-700 mb-1" %>
+        <%= f.text_area "settings[recruitment_body]", value: @settings["recruitment_body"], rows: 5, class: "w-full border border-gray-300 rounded px-3 py-2" %>
+      </div>
+      <div>
+        <%= f.label "settings[schedule_link]", "スケジュールリンク", class: "block text-sm font-medium text-gray-700 mb-1" %>
+        <%= f.url_field "settings[schedule_link]", value: @settings["schedule_link"], class: "w-full border border-gray-300 rounded px-3 py-2" %>
+      </div>
+      <div>
+        <%= f.label "settings[pv_video_url]", "PV動画URL (YouTube埋め込み)", class: "block text-sm font-medium text-gray-700 mb-1" %>
+        <%= f.url_field "settings[pv_video_url]", value: @settings["pv_video_url"], class: "w-full border border-gray-300 rounded px-3 py-2" %>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend class="text-lg font-semibold mb-3">活動情報</legend>
+    <div class="space-y-4">
+      <div>
+        <%= f.label "settings[practice_times]", "練習時間", class: "block text-sm font-medium text-gray-700 mb-1" %>
+        <%= f.text_field "settings[practice_times]", value: @settings["practice_times"], class: "w-full border border-gray-300 rounded px-3 py-2" %>
+      </div>
+      <div>
+        <%= f.label "settings[practice_location]", "練習場所", class: "block text-sm font-medium text-gray-700 mb-1" %>
+        <%= f.text_field "settings[practice_location]", value: @settings["practice_location"], class: "w-full border border-gray-300 rounded px-3 py-2" %>
+      </div>
+      <div>
+        <%= f.label "settings[member_count]", "部員数", class: "block text-sm font-medium text-gray-700 mb-1" %>
+        <%= f.text_field "settings[member_count]", value: @settings["member_count"], class: "w-full border border-gray-300 rounded px-3 py-2" %>
+      </div>
+      <div>
+        <%= f.label "settings[competitive_info]", "対抗戦情報", class: "block text-sm font-medium text-gray-700 mb-1" %>
+        <%= f.text_area "settings[competitive_info]", value: @settings["competitive_info"], rows: 3, class: "w-full border border-gray-300 rounded px-3 py-2" %>
+      </div>
+    </div>
+  </fieldset>
+
+  <div>
+    <%= f.submit "保存", class: "bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 cursor-pointer" %>
+  </div>
+<% end %>

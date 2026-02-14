@@ -1,0 +1,30 @@
+<div class="flex justify-between items-center mb-6">
+  <h1 class="text-2xl font-bold">Q&A一覧</h1>
+  <%= link_to "新規作成", new_admin_qa_item_path, class: "bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" %>
+</div>
+
+<div class="bg-white shadow rounded overflow-hidden">
+  <table class="w-full">
+    <thead class="bg-gray-50">
+      <tr>
+        <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">順番</th>
+        <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">質問</th>
+        <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">回答</th>
+        <th class="px-4 py-3 text-right text-sm font-medium text-gray-700">操作</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <% @qa_items.each do |qa_item| %>
+        <tr>
+          <td class="px-4 py-3 text-sm"><%= qa_item.position %></td>
+          <td class="px-4 py-3 text-sm font-medium"><%= truncate(qa_item.question, length: 40) %></td>
+          <td class="px-4 py-3 text-sm text-gray-500"><%= truncate(qa_item.answer, length: 40) %></td>
+          <td class="px-4 py-3 text-sm text-right space-x-2">
+            <%= link_to "編集", edit_admin_qa_item_path(qa_item), class: "text-blue-600 hover:underline" %>
+            <%= button_to "削除", admin_qa_item_path(qa_item), method: :delete, class: "text-red-600 hover:underline", data: { turbo_confirm: "本当に削除しますか？" } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

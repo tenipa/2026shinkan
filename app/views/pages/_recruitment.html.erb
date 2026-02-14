@@ -1,0 +1,29 @@
+<section id="recruitment" class="py-16 px-4 scroll-mt-16">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">新歓情報</h2>
+    <div class="bg-white rounded-lg shadow-md p-8">
+      <div class="prose max-w-none text-gray-700 mb-6">
+        <%= simple_format(settings["recruitment_body"]) %>
+      </div>
+
+      <% if settings["schedule_link"].present? %>
+        <div class="mb-6">
+          <a href="<%= settings["schedule_link"] %>" target="_blank" rel="noopener"
+             class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition font-medium">
+            新歓スケジュールを見る
+          </a>
+        </div>
+      <% end %>
+
+      <% if settings["pv_video_url"].present? %>
+        <div class="mt-8">
+          <div class="aspect-video rounded-lg overflow-hidden">
+            <iframe src="<%= settings["pv_video_url"] %>" class="w-full h-full"
+                    frameborder="0" allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

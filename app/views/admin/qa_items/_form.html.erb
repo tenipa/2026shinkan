@@ -1,0 +1,30 @@
+<%= form_with model: [:admin, qa_item], class: "bg-white shadow rounded p-6 space-y-4" do |f| %>
+  <% if qa_item.errors.any? %>
+    <div class="p-3 bg-red-100 text-red-800 rounded">
+      <ul>
+        <% qa_item.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :question, "質問", class: "block text-sm font-medium text-gray-700 mb-1" %>
+    <%= f.text_field :question, class: "w-full border border-gray-300 rounded px-3 py-2" %>
+  </div>
+
+  <div>
+    <%= f.label :answer, "回答", class: "block text-sm font-medium text-gray-700 mb-1" %>
+    <%= f.text_area :answer, rows: 4, class: "w-full border border-gray-300 rounded px-3 py-2" %>
+  </div>
+
+  <div>
+    <%= f.label :position, "表示順", class: "block text-sm font-medium text-gray-700 mb-1" %>
+    <%= f.number_field :position, class: "border border-gray-300 rounded px-3 py-2" %>
+  </div>
+
+  <div>
+    <%= f.submit class: "bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 cursor-pointer" %>
+  </div>
+<% end %>
