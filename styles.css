@@ -143,7 +143,7 @@ body {
 /* ヒーローセクション */
 .hero {
     min-height: 54vw;
-    background: url('image/background.png') no-repeat center top / contain; /* 上寄せ */
+    background: url('image/background07.jpg') no-repeat center top / contain; /* 上寄せ */
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* 上寄せ */
@@ -387,7 +387,7 @@ form button:hover {
 }
 
 /* ホバー時のアニメーション */
-.event-card:hover, .guideline-card:hover {
+.guideline-card:hover {
     transform: translateY(-5px);
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
 }
@@ -506,7 +506,75 @@ form button:hover {
     background: #0056b3;
 }
 
+/*以下07代変更点
 
 
+/* FAQセクションのスタイル */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
 
+.faq-item {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
+.faq-question {
+    color: #007bff;
+    margin-top: 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.faq-answer {
+    margin-bottom: 0;
+    padding-top: 10px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* index.htmlにあるFAQボタンを中央に寄せる */
+#details-button {
+    display: block;      /* ブロック要素にする */
+    width: fit-content;  /* 中身の文字サイズに合わせる */
+    margin: 20px auto;   /* 上下に余白を、左右をautoにして中央に配置 */
+}
+
+/* FAQページ全体の被り防止（ヘッダーの高さを考慮） */
+#faq-page-content {
+    padding-top: 80px; /* ヘッダーの高さに合わせて数値を調整してください */
+}
+
+/* サークル紹介ボタンの上に隙間（マージン）を追加 */
+#about .btn {
+    margin-top: 20px; /* ここを調整して隙間の広さを決めてください。例えば20px */
+    display: block;  /* 中央寄せを確実にするため */
+    width: fit-content; /* 中央寄せを確実にするため */
+    margin-left: auto; /* 中央寄せを確実にするため */
+    margin-right: auto; /* 中央寄せを確実にするため */
+}
+
+/* メインビジュアル下の余白を削る */
+.hero {
+    padding-bottom: 20px; /* もし元々大きい数値なら小さくします */
+}
+
+/* 新歓イベントセクションの上の余白を削る */
+#shinkan-info.section {
+    padding-top: 20px;    /* デフォルトの section 余白を上だけ小さくします */
+    margin-top: 0;        /* 念のため外側の余白もゼロに */
+}
+
+/* 「よくある質問」と「サークル紹介」両方の詳細ボタンに適用 */
+#details-button {
+    display: block;       /* 中央寄せに必須 */
+    width: fit-content;   /* 中身の幅に合わせる */
+    margin: 40px auto;    /* 【重要】1つ目の数字(40px)が「上の隙間」になります */
+    text-align: center;
+}
