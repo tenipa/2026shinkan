@@ -217,3 +217,97 @@
 }
 
 
+
+/* テニパとは？セクションは本文を左寄せ */
+.circle-section.intro-section {
+    text-align: left;
+}
+
+.circle-section.intro-section h2 {
+    text-align: center;
+}
+
+.intro-lead {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.intro-strength-title {
+    display: inline-block;
+    margin: 0 0 16px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background-color: #89CFF0;
+    color: #003b57;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+}
+
+.intro-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.intro-card {
+    background: linear-gradient(180deg, #f4fbff 0%, #ffffff 100%);
+    border: 1px solid #bfe4f7;
+    border-left: 6px solid #89CFF0;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 4px 10px rgba(62, 146, 191, 0.12);
+}
+
+.intro-card-label {
+    margin: 0 0 6px;
+    color: #3ba9e0;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.intro-card-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.intro-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    background-color: #e9f7ff;
+    font-size: 17px;
+}
+
+.intro-card-head h3 {
+    margin: 0;
+    color: #2e6f90;
+    font-size: 20px;
+}
+
+.intro-card p {
+    margin: 4px 0;
+}
+
+.intro-card a {
+    color: #2f8fc2;
+    text-decoration: none;
+}
+
+.intro-card a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .intro-cards {
+        grid-template-columns: 1fr;
+    }
+}

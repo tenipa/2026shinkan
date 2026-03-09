@@ -194,15 +194,15 @@ ul li a:hover {
 
 /* 重要な注意書きのデザイン */
 .important-note {
-    background-color: #ff3cd; /* 黄色系の背景 */
-    color: #856404; /* 暗めの黄色文字 */
+    background-color: #fff3cd; /* 修正：桁数を6桁にしました */
+    color: #856404;            /* 暗めの黄色文字 */
     padding: 15px;
     border-radius: 5px;
     border: 1px solid #ffeeba;
     text-align: center;
     font-weight: bold;
     margin-bottom: 20px;
-}
+} 
 
 .event-intro {
     display: flex;
